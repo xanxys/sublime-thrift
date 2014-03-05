@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>thrift</string>
+	</array>
+	<key>name</key>
+	<string>Thrift Syntax</string>
+	<key>patterns</key>
+	<array>
+
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.thrift</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(//|#).*$</string>
+			<key>name</key>
+			<string>comment.line.thrift</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(namespace|enum|struct|service|exception|required|optional|throws|const)</string>
+			<key>name</key>
+			<string>keyword.thrift</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(bool|byte|i16|i32|i64|double|string|binary|list|map|set)</string>
+			<key>name</key>
+			<string>storage.type.thrift</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.thrift</string>
+	<key>uuid</key>
+	<string>fa326c5c-81c5-49e6-8d4a-6a7555781b33</string>
+</dict>
+</plist>
