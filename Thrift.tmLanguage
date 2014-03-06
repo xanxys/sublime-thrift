@@ -27,6 +27,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>"[^"]*"</string>
+			<key>name</key>
+			<string>string.value.thrift</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(^|\s|[:={}&lt;&gt;(),])(namespace|enum|struct|service|exception|required|optional|throws|const)(?=$|\s|[:={}&lt;&gt;(),])</string>
 			<key>captures</key>
 			<dict>
