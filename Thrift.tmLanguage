@@ -33,6 +33,18 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(^|\s|[:={}&lt;&gt;(),])([+-]?[0-9]+(\.[0-9]+)?([eE][+-][0-9]+)?)(?=$|\s|[:={}&lt;&gt;(),])</string>
+			<key>captures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.thrift</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(^|\s|[:={}&lt;&gt;(),])(namespace|enum|struct|service|exception|required|optional|throws|const)(?=$|\s|[:={}&lt;&gt;(),])</string>
 			<key>captures</key>
 			<dict>
