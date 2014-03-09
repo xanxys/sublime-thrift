@@ -45,7 +45,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(^|\s|[:={}&lt;&gt;(),])(namespace|enum|struct|service|exception|required|optional|throws|const)(?=$|\s|[:={}&lt;&gt;(),])</string>
+			<string>(^|\s|[:={}&lt;&gt;(),])(namespace|enum|struct|service|exception|required|optional|throws|const|oneway)(?=$|\s|[:={}&lt;&gt;(),])</string>
 			<key>captures</key>
 			<dict>
 				<key>2</key>
