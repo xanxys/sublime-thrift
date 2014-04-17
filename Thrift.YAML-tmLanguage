@@ -2,7 +2,7 @@
 name: Thrift
 scopeName: source.thrift
 fileTypes: [thrift]
-uuid: 9E5704AC-54ED-4D7C-946C-6DC3727BDC4C
+uuid: fa326c5c-81c5-49e6-8d4a-6a7555781b33
 
 patterns:
 - include: '#comments'
@@ -329,4 +329,3 @@ repository:
       - include: '#value'
     - name: invalid.illegal.thrift
       match: \S
-keyEquivalent: ^~T
