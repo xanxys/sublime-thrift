@@ -167,7 +167,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>$|^</string>
+					<string>[,;]|$|^</string>
 					<key>name</key>
 					<string>meta.const.thrift</string>
 					<key>patterns</key>
@@ -338,7 +338,7 @@
 										</dict>
 									</dict>
 									<key>match</key>
-									<string>(?&lt;!\S)([a-zA-Z_][\w.]*)(?:\s*=\s*(\d*)(?:\s*[,;])?)?</string>
+									<string>(?&lt;!\S)([a-zA-Z_][\w.]*)(?:\s*=\s*(\d*))?(?:\s*[,;])?</string>
 								</dict>
 								<dict>
 									<key>include</key>

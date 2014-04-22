@@ -52,7 +52,7 @@ patterns:
       '1': {name: keyword.other.const.thrift}
       '2': {name: storage.type.const.thrift}
       '3': {name: variable.other.const.thrift}
-    end: $|^
+    end: "[,;]|$|^"
     patterns:
     - include: '#comments'
     - include: '#value'
@@ -97,7 +97,7 @@ patterns:
       endCaptures:
         '0': {name: punctuation.section.enum.end.thrift}
       patterns:
-      - match: (?<!\S)([a-zA-Z_][\w.]*)(?:\s*=\s*(\d*)(?:\s*[,;])?)?
+      - match: (?<!\S)([a-zA-Z_][\w.]*)(?:\s*=\s*(\d*))?(?:\s*[,;])?
         captures:
           '1': {name: variable.other.enum.thrift}
           '2': {name: constant.numeric.integer.thrift}
