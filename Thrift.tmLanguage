@@ -232,7 +232,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>(?&lt;=\})|$</string>
+					<string>(?&lt;=\})</string>
 					<key>name</key>
 					<string>meta.union.thrift</string>
 					<key>patterns</key>
@@ -295,7 +295,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>(?&lt;=\})|$</string>
+					<string>(?&lt;=\})</string>
 					<key>name</key>
 					<string>meta.enum.thrift</string>
 					<key>patterns</key>
@@ -442,7 +442,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>(?&lt;=\})|$</string>
+					<string>(?&lt;=\})</string>
 					<key>name</key>
 					<string>meta.struct.thrift</string>
 					<key>patterns</key>
@@ -505,7 +505,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>(?&lt;=\})|$</string>
+					<string>(?&lt;=\})</string>
 					<key>name</key>
 					<string>meta.exception.thrift</string>
 					<key>patterns</key>
@@ -572,7 +572,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>(?&lt;=\})|$</string>
+					<string>(?&lt;=\})</string>
 					<key>name</key>
 					<string>meta.service.thrift</string>
 					<key>patterns</key>

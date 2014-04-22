@@ -70,7 +70,7 @@ patterns:
     beginCaptures:
       '1': {name: keyword.other.union.thrift}
       '2': {name: entity.name.type.union.thrift}
-    end: (?<=\})|$
+    end: (?<=\})
     patterns:
     - name: keyword.other.xsd-all.thrift
       match: (?<!\S)xsd_all(?!\S)
@@ -88,7 +88,7 @@ patterns:
     beginCaptures:
       '1': {name: keyword.other.enum.thrift}
       '2': {name: entity.name.type.enum.thrift}
-    end: (?<=\})|$
+    end: (?<=\})
     patterns:
     - begin: \{
       beginCaptures:
@@ -129,7 +129,7 @@ patterns:
     beginCaptures:
       '1': {name: keyword.other.struct.thrift}
       '2': {name: entity.name.type.struct.thrift}
-    end: (?<=\})|$
+    end: (?<=\})
     patterns:
     - name: keyword.other.xsd-all.thrift
       match: (?<!\S)xsd_all(?!\S)
@@ -147,7 +147,7 @@ patterns:
     beginCaptures:
       '1': {name: keyword.other.exception.thrift}
       '2': {name: entity.name.type.exception.thrift}
-    end: (?<=\})|$
+    end: (?<=\})
     patterns:
     - begin: \{
       beginCaptures:
@@ -165,7 +165,7 @@ patterns:
       '2': {name: entity.name.type.service.thrift}
       '3': {name: keyword.other.service.extends.thrift}
       '4': {name: entity.other.inherited-class.thrift}
-    end: (?<=\})|$
+    end: (?<=\})
     patterns:
     - begin: \{
       beginCaptures:
