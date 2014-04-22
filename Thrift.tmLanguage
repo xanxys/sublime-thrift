@@ -153,7 +153,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.const.thrift</string>
+							<string>storage.modifier.const.thrift</string>
 						</dict>
 						<key>2</key>
 						<dict>

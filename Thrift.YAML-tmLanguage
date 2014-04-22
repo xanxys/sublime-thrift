@@ -49,7 +49,7 @@ patterns:
   - name: meta.const.thrift
     begin: (?<!\S)(const)(?!\S)(?:\s+(?<ft>map\s*<\s*\g<ft>\s*,\s*\g<ft>\s*>|set\s*<\s*\g<ft>\s*>|list\s*<\s*\g<ft>\s*>\s*cpp_type|[a-zA-Z_][\w.]*)(?:\s+([a-zA-Z_][\w.]*)(?:\s*=)?)?)?
     beginCaptures:
-      '1': {name: keyword.other.const.thrift}
+      '1': {name: storage.modifier.const.thrift}
       '2': {name: storage.type.const.thrift}
       '3': {name: variable.other.const.thrift}
     end: "[,;]|$|^"
