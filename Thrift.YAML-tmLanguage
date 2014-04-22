@@ -176,13 +176,13 @@ patterns:
       patterns:
       - include: '#comments'
       - name: meta.service.function.thrift
-        begin: "(?x)(?<!\\S)\n\t\t\t\t\t\t\t\t\t\t\t(async(?!\\S))?\\s*\n\t\t\t\t\t\
-          \t\t\t\t\t\t(?<ft>\n\t\t\t\t\t\t\t\t\t\t\t\tmap\\s*<\\s*\\g<ft>\\s*,\\s*\\\
-          g<ft>\\s*> |\n\t\t\t\t\t\t\t\t\t\t\t\tset\\s*<\\s*\\g<ft>\\s*> |\n\t\t\t\
-          \t\t\t\t\t\t\t\t\tlist\\s*<\\s*\\g<ft>\\s*>\\s*(cpp_type(?!\\S))? |\n\t\t\
-          \t\t\t\t\t\t\t\t\t\t(?!async\\b)[a-zA-Z_][\\w.]*\n\t\t\t\t\t\t\t\t\t\t\t\
-          )\\s*\n\t\t\t\t\t\t\t\t\t\t\t(?:\n\t\t\t\t\t\t\t\t\t\t\t\t(?<!\\S)([a-zA-Z_][\\\
-          w.]*)\\s*(?![^\\s(])\n\t\t\t\t\t\t\t\t\t\t\t)?"
+        begin: "(?x)(?<!\\S)(async(?!\\S))?\\s*\
+          (?<ft>map\\s*<\\s*\\g<ft>\\s*,\\s*\\\
+          g<ft>\\s*> |set\\s*<\\s*\\g<ft>\\s*> |\
+          list\\s*<\\s*\\g<ft>\\s*>\\s*(cpp_type(?!\\S))? |\
+          (?!async\\b)[a-zA-Z_][\\w.]*\
+          )\\s*(?:(?<!\\S)([a-zA-Z_][\\\
+          w.]*)\\s*(?![^\\s(]))?"
         beginCaptures:
           '1': {name: keyword.other.async.thrift}
           '2': {name: storage.type.function.thrift}
@@ -255,9 +255,9 @@ repository:
 
   field:
     name: meta.field.thrift
-    begin: "(?x)\n\t\t\t\t\t\t(?<![^\\s{(])(?=\\S)\n\t\t\t\t\t\t(\\d+\\s*:)?[ \\t]*\n\
-      \t\t\t\t\t\t(?:\t(required|optional)(?!\\S)[ \\t]*\n\t\t\t\t\t\t|\t(?=\\S)(?!=required|optional|\\\
-      d)\n\t\t\t\t\t\t)"
+    begin: "(?x)(?<![^\\s{(])(?=\\S)(\\d+\\s*:)?[ \\t]*\
+      (?:(required|optional)(?!\\S)[ \\t]*|(?=\\S)(?!=required|optional|\\\
+      d))"
     beginCaptures:
       '1': {name: entity.other.field-id.thrift}
       '2': {name: keyword.other.requiredness.thrift}
@@ -265,11 +265,11 @@ repository:
     endCaptures:
       '0': {name: punctuation.separator.fields.thrift}
     patterns:
-    - begin: "(?x)\n\t\t\t\t\t\t\t(?<ft>\n\t\t\t\t\t\t\t\tmap\\s*<\\s*\\g<ft>\\s*,\\\
-        s*\\g<ft>\\s*> |\n\t\t\t\t\t\t\t\tset\\s*<\\s*\\g<ft>\\s*> |\n\t\t\t\t\t\t\
-        \t\tlist\\s*<\\s*\\g<ft>\\s*>\\s*(cpp_type(?!\\S))? |\n\t\t\t\t\t\t\t\t[a-zA-Z_][\\\
-        w.]*\n\t\t\t\t\t\t\t)[ \\t]*\n\t\t\t\t\t\t\t(?:([a-zA-Z_][\\w.]*)[ \\t]*)?\
-        \ # identifier\n\t\t\t\t\t\t\t"
+    - begin: "(?x)(?<ft>map\\s*<\\s*\\g<ft>\\s*,\\\
+        s*\\g<ft>\\s*> |set\\s*<\\s*\\g<ft>\\s*> |\
+        list\\s*<\\s*\\g<ft>\\s*>\\s*(cpp_type(?!\\S))? |[a-zA-Z_][\\\
+        w.]*)[ \\t]*(?:([a-zA-Z_][\\w.]*)[ \\t]*)?\
+        \ # identifier"
       beginCaptures:
         '1': {name: storage.type.field.thrift}
         '2': {name: keyword.other.cpp-type.thrift}
