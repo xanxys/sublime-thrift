@@ -1,6 +1,8 @@
 Syntax highlighting for Apache Thrift
 
 ## Contribution
+**Since I'm a proud atom user now, I'm no longer maintaining this project. Feel free to fork.**
+
 * Make sure to generate Thrift.tmLanguage from Thrift.YAML-tmLanguage before sending a pull request.
 
 ## Debug Hints
